@@ -1,0 +1,211 @@
+{
+    "m_SelectedDeviceId": "3ed50964",
+    "m_SelectedPackage": {
+        "deviceId": "3ed50964",
+        "name": "com.Try.Try2",
+        "processId": 9255,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 22899,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 24954,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 26136,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 27330,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 28473,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 30769,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 32615,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 3382,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 21165,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 9031,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 12464,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 26221,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 7926,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 14567,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 15661,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 18136,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 24677,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 26442,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 27350,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 28599,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 30209,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.Try.Try2",
+            "processId": 9255,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_FilterOptions": {
+        "m_Filter": "Debug",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    }
+}
