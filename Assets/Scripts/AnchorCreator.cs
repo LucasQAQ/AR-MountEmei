@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -12,6 +13,8 @@ public class AnchorCreator : MonoBehaviour
         {
             Destroy(anchor.Key.gameObject);
         }
+        //spawnedObject.
+        Destroy(spawnedObject.gameObject);
         s_Hits.Clear();
         anchorDic.Clear();
     }
@@ -24,20 +27,24 @@ public class AnchorCreator : MonoBehaviour
         phoneARCamera = cameraImage.GetComponent<PhoneARCamera>();
     }
 
-    ARAnchor CreateAnchor(in ARRaycastHit hit)
+    ARAnchor CreateAnchor(ARRaycastHit hit, float width, float height)
     {
-        // TODO: create plane anchor
-
+        //transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+        ARAnchor mReferencePoint = m_AnchorManager.AddAnchor(hit.pose);
+        Debug.Log($"DEBUG: width {spawnPrefab.transform.localScale.x} height {spawnPrefab.transform.localScale.y} size {spawnPrefab.transform.lossyScale}");
+        // spawnPrefab.transform.localScale = new Vector3(width, height, 1);
+        spawnedObject = Instantiate(spawnPrefab, hit.pose.position, spawnPrefab.transform.rotation);
         // create a regular anchor at the hit pose
         Debug.Log($"DEBUG: Creating regular anchor. distance: {hit.distance}. session distance: {hit.sessionRelativeDistance} type: {hit.hitType}.");
-        return m_AnchorManager.AddAnchor(hit.pose);
+
+        return mReferencePoint;
     }
 
-    private bool Pos2Anchor(float x, float y, BoundingBox outline)
+    private bool Pos2Anchor(float x, float y, BoundingBox outline, float width, float height)
     {
         // GameObject anchorObj = m_RaycastManager.raycastPrefab;
         // TextMesh anchorObj_mesh = anchorObj.GetComponent<TextMesh>();
-        anchorObj_mesh.text = $"{outline.Label}: {(int)(outline.Confidence * 100)}%";
+        //anchorObj_mesh.text = $"{outline.Label}: {(int)(outline.Confidence * 100)}%";
         // Perform the raycast
         if (m_RaycastManager.Raycast(new Vector2(x, y), s_Hits, trackableTypes))
         {
@@ -46,7 +53,8 @@ public class AnchorCreator : MonoBehaviour
             //TextMesh anchorObj = GameObject.Find("New Text").GetComponent<TextMesh>();
             // Create a new anchor
             Debug.Log("Creating Anchor");
-            var anchor = CreateAnchor(hit);
+
+            var anchor = CreateAnchor(hit, width, height);
             if (anchor)
             {
                 Debug.Log($"DEBUG: creating anchor. {outline}");
@@ -97,7 +105,8 @@ public class AnchorCreator : MonoBehaviour
                     s_Hits.Clear();
                 }
             }
-            foreach (var item in itemsToRemove) {
+            foreach (var item in itemsToRemove)
+            {
                 anchorDic.Remove(item);
             }
         }
@@ -127,7 +136,7 @@ public class AnchorCreator : MonoBehaviour
             float center_x = xMin + width / 2f;
             float center_y = yMin - height / 2f;
 
-            if (Pos2Anchor(center_x, center_y, outline))
+            if (Pos2Anchor(center_x, center_y, outline, width, height))
             {
                 Debug.Log("Outline used is true");
                 outline.Used = true;
@@ -149,10 +158,12 @@ public class AnchorCreator : MonoBehaviour
     private float shiftX;
     private float shiftY;
     private float scaleFactor;
+    private GameObject spawnedObject = null;
 
+    public GameObject spawnPrefab;
     public PhoneARCamera phoneARCamera;
     public ARRaycastManager m_RaycastManager;
-    public TextMesh anchorObj_mesh;
+    //public TextMesh anchorObj_mesh;
     public ARAnchorManager m_AnchorManager;
 
     // Raycast against planes and feature points
