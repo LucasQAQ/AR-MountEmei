@@ -41,7 +41,8 @@ public class PhoneARCamera : MonoBehaviour
         set { m_RawImage = value; }
     }
 
-    public enum Detectors{
+    public enum Detectors
+    {
         Yolo3_tiny
     };
     public Detectors selected_detector;
@@ -70,7 +71,7 @@ public class PhoneARCamera : MonoBehaviour
 
     void OnEnable()
     {
-        
+
         if (m_CameraManager != null)
         {
             m_CameraManager.frameReceived += OnCameraFrameReceived;

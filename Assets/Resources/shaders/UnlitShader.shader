@@ -14,6 +14,7 @@ Shader "Unlit/UnlitShader"
 		{
 			Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" "DisableBatching" = "True"}
 			Blend[_SrcBlend][_DstBlend]
+			ZWrite Off
 			Cull off
 			LOD 100
 			Pass
