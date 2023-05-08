@@ -11,6 +11,7 @@
 /[Mm]emoryCaptures/
 /[Bb]ackup_BurstDebugInformation_DoNotShip
 /[Tt]ry_BurstDebugInformation_DoNotShip
+/[Aa]RFoundationRemoteCompanionApp
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
