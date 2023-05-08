@@ -2,29 +2,31 @@ Shader "Unlit/UnlitShader"
 {
 	Properties
 	{
-		[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Blend",int) = 0
-		[Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Blend",int) = 0
+		//[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Blend",int) = 0
+		//[Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Blend",int) = 0
 		_MainTex("Texture", 2D) = "white" {}
-		[Toggle]_MaskEnabled("Color Toggle",int) = 0
 		_Color("Color",color) = (1,1,1,1)
+		_AlphaScale("Alpha Scale", Range(0, 1)) = 1
 		_VerticalBillboarding("Vertical Restraints", Range(0, 1)) = 1
 	}
 
 		SubShader
 		{
-			Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" "DisableBatching" = "True"}
-			Blend[_SrcBlend][_DstBlend]
-			ZWrite Off
-			Cull off
-			LOD 100
 			Pass
 			{
+				Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" "DisableBatching" = "True"}
+
+				ZWrite Off
+				Cull off
+				LOD 100
+				Blend SrcAlpha OneMinusSrcAlpha
 				CGPROGRAM
+
 				#pragma vertex vert
 				#pragma fragment frag
-				#pragma shader_feature _ _MASKENABLED_ON
 
 				#include "UnityCG.cginc"
+				#include "Lighting.cginc"
 
 				struct appdata
 				{
@@ -40,6 +42,7 @@ Shader "Unlit/UnlitShader"
 
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
+				fixed _AlphaScale;
 				fixed4 _Color;
 				fixed _VerticalBillboarding;
 
@@ -70,11 +73,8 @@ Shader "Unlit/UnlitShader"
 					fixed4 c;
 					c = tex2D(_MainTex,i.uv);
 
-					#if _MASKENABLED_ON
-					c = saturate(c + _Color);
-					#endif
 
-					return c;
+					return fixed4(c.rgb, c.a*_AlphaScale);
 				}
 				ENDCG
 			}

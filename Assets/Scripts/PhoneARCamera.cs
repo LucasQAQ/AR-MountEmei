@@ -52,7 +52,7 @@ public class PhoneARCamera : MonoBehaviour
     public float shiftX = 0f;
     public float shiftY = 0f;
     public float scaleFactor = 1;
-
+    public bool successCreateAnchor = false;
     public Color colorTag = new Color(0.3843137f, 0, 0.9333333f);
     private static GUIStyle labelStyle;
     private static Texture2D boxOutlineTexture;
@@ -104,6 +104,7 @@ public class PhoneARCamera : MonoBehaviour
         Debug.Log("DEBUG: onRefresh, removing anchors and boundingboxes");
         localization = false;
         staticNum = 0;
+        successCreateAnchor = false;
         // clear boubding box containers
         boxSavedOutlines.Clear();
         boxOutlines.Clear();
@@ -117,6 +118,7 @@ public class PhoneARCamera : MonoBehaviour
     {
         // Attempt to get the latest camera image. If this method succeeds,
         // it acquires a native resource that must be disposed (see below).
+        if (localization == true) return;
         XRCpuImage image;
         if (!cameraManager.TryAcquireLatestCpuImage(out image))
         {
@@ -162,6 +164,7 @@ public class PhoneARCamera : MonoBehaviour
         // If bounding boxes are static for certain frames, start localization
         if (staticNum > 100)
         {
+            staticNum = 0;
             localization = true;
         }
         else
@@ -176,7 +179,7 @@ public class PhoneARCamera : MonoBehaviour
 
     }
 
-    /*public void OnGUI()
+    public void OnGUI()
     {
         // Do not draw bounding boxes after localization.
         if (localization)
@@ -191,7 +194,7 @@ public class PhoneARCamera : MonoBehaviour
                 DrawBoxOutline(outline, scaleFactor, shiftX, shiftY);
             }
         }
-    }*/
+    }
 
     // merging bounding boxes and save result to boxSavedOutlines
     private void GroupBoxOutlines()
