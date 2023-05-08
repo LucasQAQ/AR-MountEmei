@@ -1,143 +1,41 @@
 {
     "m_SelectedDeviceId": "3ed50964",
     "m_SelectedPackage": {
-        "deviceId": "3ed50964",
-        "name": "com.Try.Try2",
-        "processId": 9255,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 22899,
-            "exited": false
+            "name": "com.Try.Try",
+            "processId": 24470,
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 24954,
-            "exited": false
+            "name": "com.Try.Try3",
+            "processId": 31591,
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 26136,
-            "exited": false
+            "name": "com.Try.Try3ARCompanion",
+            "processId": 14787,
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 27330,
-            "exited": false
+            "name": "com.Try.Try4",
+            "processId": 15666,
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 28473,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 30769,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 32615,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 3382,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 21165,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 9031,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 12464,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 26221,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 7926,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 14567,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 15661,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 18136,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 24677,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 26442,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 27350,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 28599,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 30209,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try2",
-            "processId": 9255,
+            "name": "com.Try.Try4ARCompanion",
+            "processId": 22465,
             "exited": false
         }
     ],

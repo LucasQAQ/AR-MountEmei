@@ -29,14 +29,14 @@ public class AnchorCreator : MonoBehaviour
 
     ARAnchor CreateAnchor(ARRaycastHit hit, float width, float height)
     {
-        //transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
         ARAnchor mReferencePoint = m_AnchorManager.AddAnchor(hit.pose);
-        Debug.Log($"DEBUG: width {spawnPrefab.transform.localScale.x} height {spawnPrefab.transform.localScale.y} size {spawnPrefab.transform.lossyScale}");
-        // spawnPrefab.transform.localScale = new Vector3(width, height, 1);
-        spawnedObject = Instantiate(spawnPrefab, hit.pose.position, spawnPrefab.transform.rotation);
+        spawnPrefab.transform.localScale = Vector3.one * hit.distance / 2;
+        Debug.Log($"DEBUG: mesh {spawnPrefab.GetComponent<MeshFilter>().mesh.bounds.size} Collider {spawnPrefab.GetComponent<Collider>().bounds.size}");
+        //spawnPrefab.transform.localScale = new Vector3(width, height, 1);
+        spawnedObject = Instantiate(spawnPrefab, hit.pose.position, hit.pose.rotation);
         // create a regular anchor at the hit pose
         Debug.Log($"DEBUG: Creating regular anchor. distance: {hit.distance}. session distance: {hit.sessionRelativeDistance} type: {hit.hitType}.");
-
+        Debug.Log($"DEBUG: scale:{spawnPrefab.transform.localScale}");
         return mReferencePoint;
     }
 
@@ -46,7 +46,8 @@ public class AnchorCreator : MonoBehaviour
         // TextMesh anchorObj_mesh = anchorObj.GetComponent<TextMesh>();
         //anchorObj_mesh.text = $"{outline.Label}: {(int)(outline.Confidence * 100)}%";
         // Perform the raycast
-        if (m_RaycastManager.Raycast(new Vector2(x, y), s_Hits, trackableTypes))
+        //if (m_RaycastManager.Raycast(new Vector2(x, y), s_Hits, trackableTypes))
+        if (m_RaycastManager.Raycast(new Vector2(x, y), s_Hits))
         {
             // Raycast hits are sorted by distance, so the first one will be the closest hit.
             var hit = s_Hits[0];
@@ -79,6 +80,7 @@ public class AnchorCreator : MonoBehaviour
 
     void Update()
     {
+        if (phoneARCamera.successCreateAnchor == true) return;
         // If bounding boxes are not stable, return directly without raycast
         if (!phoneARCamera.localization)
         {
@@ -135,15 +137,18 @@ public class AnchorCreator : MonoBehaviour
 
             float center_x = xMin + width / 2f;
             float center_y = yMin - height / 2f;
-
+            Debug.Log("Debug: Detection is finished");
             if (Pos2Anchor(center_x, center_y, outline, width, height))
             {
-                Debug.Log("Outline used is true");
+                Debug.Log("Debug: Outline used is true");
                 outline.Used = true;
+                phoneARCamera.successCreateAnchor = true;
             }
             else
             {
-                //Debug.Log("Outline used is false");
+                phoneARCamera.localization = false;
+                phoneARCamera.successCreateAnchor = false;
+                Debug.Log("Debug: Outline used is false");
             }
         }
 
@@ -159,7 +164,6 @@ public class AnchorCreator : MonoBehaviour
     private float shiftY;
     private float scaleFactor;
     private GameObject spawnedObject = null;
-
     public GameObject spawnPrefab;
     public PhoneARCamera phoneARCamera;
     public ARRaycastManager m_RaycastManager;
