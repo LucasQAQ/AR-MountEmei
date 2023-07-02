@@ -9,8 +9,6 @@
     }
   ],
   "dependencies": {
-    "com.easyar.sense": "file:C:/Users/Lucas/Downloads/EasyARSenseUnityPlugin_4.6.2+3022.b15d4240/com.easyar.sense-4.6.2+3022.b15d4240.tgz",
-    "com.easyar.sense.ext.arfoundation": "file:C:/Users/Lucas/Downloads/EasyARSenseUnityPlugin_4.6.2+3022.b15d4240/com.easyar.sense.ext.arfoundation-4.6.2+3022.b15d4240.tgz",
     "com.kyrylokuzyk.arfoundationremote": "file:../Assets/Plugins/ARFoundationRemoteInstaller/com.kyrylokuzyk.arfoundationremote.tgz",
     "com.unity.barracuda": "2.0.0",
     "com.unity.ide.visualstudio": "2.0.16",
