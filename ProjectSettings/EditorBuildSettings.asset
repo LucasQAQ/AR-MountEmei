@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Detect.unity
     guid: 0ac926d5817d54df194262ddcc5326f5
+  - enabled: 1
+    path: Assets/ARNavigation/Scenes/Mapbox Route.unity
+    guid: 4fc6ee4613f00408f8179485c76b9d85
   m_configObjects:
     AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: 6f15c886c8a98f54a987e9c7346148f6,
       type: 2}
