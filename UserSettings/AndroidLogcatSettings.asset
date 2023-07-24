@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "3ed50964",
     "m_SelectedPackage": {
         "deviceId": "3ed50964",
-        "name": "com.Try.Try4",
-        "processId": 16927,
+        "name": "com.SCU.AREmei",
+        "processId": 21297,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "3ed50964",
             "name": "com.Try.Try4",
             "processId": 16927,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 21297,
             "exited": false
         }
     ],
