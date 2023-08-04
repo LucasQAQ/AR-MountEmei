@@ -27,12 +27,12 @@ public class AnchorCreator : MonoBehaviour
         phoneARCamera = cameraImage.GetComponent<PhoneARCamera>();
     }
 
-    ARAnchor CreateAnchor(ARRaycastHit hit, float width, float height)
+    ARAnchor CreateAnchor(ARRaycastHit hit)
     {
+        
         ARAnchor mReferencePoint = m_AnchorManager.AddAnchor(hit.pose);
         spawnPrefab.transform.localScale = Vector3.one * hit.distance / 2;
         Debug.Log($"DEBUG: mesh {spawnPrefab.GetComponent<MeshFilter>().mesh.bounds.size} Collider {spawnPrefab.GetComponent<Collider>().bounds.size}");
-        //spawnPrefab.transform.localScale = new Vector3(width, height, 1);
         spawnedObject = Instantiate(spawnPrefab, hit.pose.position, hit.pose.rotation);
         // create a regular anchor at the hit pose
         Debug.Log($"DEBUG: Creating regular anchor. distance: {hit.distance}. session distance: {hit.sessionRelativeDistance} type: {hit.hitType}.");
@@ -40,7 +40,7 @@ public class AnchorCreator : MonoBehaviour
         return mReferencePoint;
     }
 
-    private bool Pos2Anchor(float x, float y, BoundingBox outline, float width, float height)
+    private bool Pos2Anchor(float x, float y, BoundingBox outline)
     {
         // GameObject anchorObj = m_RaycastManager.raycastPrefab;
         // TextMesh anchorObj_mesh = anchorObj.GetComponent<TextMesh>();
@@ -55,7 +55,7 @@ public class AnchorCreator : MonoBehaviour
             // Create a new anchor
             Debug.Log("Creating Anchor");
 
-            var anchor = CreateAnchor(hit, width, height);
+            var anchor = CreateAnchor(hit);
             if (anchor)
             {
                 Debug.Log($"DEBUG: creating anchor. {outline}");
@@ -137,8 +137,8 @@ public class AnchorCreator : MonoBehaviour
 
             float center_x = xMin + width / 2f;
             float center_y = yMin - height / 2f;
-            Debug.Log("Debug: Detection is finished");
-            if (Pos2Anchor(center_x, center_y, outline, width, height))
+            Debug.Log($"Debug: Detection is finished. {xMin}, {yMin}, {width}, {height}, {center_x}, {center_y}");
+            if (Pos2Anchor(center_x, center_y, outline))
             {
                 Debug.Log("Debug: Outline used is true");
                 outline.Used = true;

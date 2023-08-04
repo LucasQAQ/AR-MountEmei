@@ -24,7 +24,7 @@ public class levelLoader_navi_home : MonoBehaviour
     public void LoadNextLevel()
     {
         //StartCoroutine(LoadLevel(1 - SceneManager.GetActiveScene().buildIndex));
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel(2));
     }
 
     IEnumerator LoadLevel(int levelIndex)
