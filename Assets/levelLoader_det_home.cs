@@ -24,7 +24,7 @@ public class levelLoader_det_home : MonoBehaviour
     public void LoadNextLevel()
     {
         //StartCoroutine(LoadLevel(1 - SceneManager.GetActiveScene().buildIndex));
-         StartCoroutine(LoadLevel(0));
+         StartCoroutine(LoadLevel(1));
     }
 
     IEnumerator LoadLevel(int levelIndex)

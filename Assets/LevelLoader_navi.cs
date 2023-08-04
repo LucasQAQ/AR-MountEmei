@@ -39,20 +39,14 @@ public class LevelLoader_navi : MonoBehaviour
     public void LoadHome()
     {
         //StartCoroutine(LoadLevel(1 - SceneManager.GetActiveScene().buildIndex));
-        StartCoroutine(LoadLevel(2));
+        StartCoroutine(LoadLevel(0));
     }
 
     public void LoadNextLevel()
     {
         //StartCoroutine(LoadLevel(1 - SceneManager.GetActiveScene().buildIndex));
-        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            StartCoroutine(LoadLevel(0));
-        }
-        else
-        {
-            StartCoroutine(LoadLevel(1));
-        }
+        StartCoroutine(LoadLevel(1));
+        
     }
 
     IEnumerator LoadLevel(int levelIndex)
