@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "3ed50964",
         "name": "com.SCU.AREmei",
-        "processId": 17396,
+        "processId": 20215,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -126,6 +126,12 @@
             "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 17396,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 20215,
             "exited": false
         }
     ],
