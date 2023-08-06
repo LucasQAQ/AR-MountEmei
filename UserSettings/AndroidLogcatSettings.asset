@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "3ed50964",
         "name": "com.SCU.AREmei",
-        "processId": 20215,
+        "processId": 19043,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -132,6 +132,48 @@
             "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 20215,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 23700,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 23731,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 2941,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 2942,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 2943,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 2945,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 19043,
             "exited": false
         }
     ],
