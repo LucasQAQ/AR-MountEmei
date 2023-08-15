@@ -13,7 +13,7 @@ namespace ARLocation.MapboxRoutes.SampleProject
             NextTarget
         }
 
-        public string MapboxToken = "pk.eyJ1IjoibHVjYXMwMjEyMjMiLCJhIjoiY2xqZnNxNzdnMDN5YjNkbzRlYTc3MG9nNSJ9.92GMiy7UCgtuwdKy8l7sEA";
+        public string MapboxToken;
         public GameObject ARSession;
         public GameObject ARSessionOrigin;
         public GameObject RouteContainer;
