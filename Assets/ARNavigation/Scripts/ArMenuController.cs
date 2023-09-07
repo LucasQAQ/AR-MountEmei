@@ -259,11 +259,11 @@ namespace ARLocation.MapboxRoutes.SampleProject
 
             if (mc.PathRendererType == MenuController.LineType.Route)
             {
-                Elements.LabelTargetRender.text = "Route Path";
+                Elements.LabelTargetRender.text = "导航路径";
             }
             else
             {
-                Elements.LabelTargetRender.text = "Line To Target";
+                Elements.LabelTargetRender.text = "目标方位";
             }
 
         }
@@ -275,12 +275,12 @@ namespace ARLocation.MapboxRoutes.SampleProject
             if (mc.PathRendererType == MenuController.LineType.Route)
             {
                 mc.PathRendererType = MenuController.LineType.NextTarget;
-                Elements.LabelTargetRender.text = "Line To Target";
+                Elements.LabelTargetRender.text = "目标方位";
             }
             else
             {
                 mc.PathRendererType = MenuController.LineType.Route;
-                Elements.LabelTargetRender.text = "Route Path";
+                Elements.LabelTargetRender.text = "导航路径";
             }
         }
 

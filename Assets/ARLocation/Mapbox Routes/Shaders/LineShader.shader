@@ -20,8 +20,6 @@
         Pass
         {
             CGPROGRAM
-            // Upgrade NOTE: excluded shader from DX11; has structs without semantics (struct v2f members worldPos)
-            #pragma exclude_renderers d3d11
             #pragma vertex vert
             #pragma fragment frag
             // make fog work
@@ -80,10 +78,16 @@
                 else if (d < (_MaxDistance - _FadeDistance))
                 {
                     col.a *= 1;
+                    if(col.b != 0){
+                        col.rgb = half3((cos(d/10+_Time.y) + 3)/4, (cos(d/10*_Time.y) + 3)/4, (sin(d/10+_Time.y) + 3)/4);
+                    }
                 }
                 else
                 {
                     col.a *= (_MaxDistance - d)/_FadeDistance;
+                    if(col.b != 0){
+                        col.rgb = half3((cos(d/10+_Time.y) + 3)/4, (cos(d/10*_Time.y) + 3)/4, (sin(d/10+_Time.y) + 3)/4);
+                     }
                 }
 
                 //float maxDistance = 2.0;

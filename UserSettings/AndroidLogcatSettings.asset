@@ -3,177 +3,75 @@
     "m_SelectedPackage": {
         "deviceId": "3ed50964",
         "name": "com.SCU.AREmei",
-        "processId": 19043,
+        "processId": 27726,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "3ed50964",
-            "name": "com.Try.Try",
-            "processId": 24470,
-            "exited": true
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try3",
-            "processId": 31591,
-            "exited": true
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try3ARCompanion",
-            "processId": 14787,
-            "exited": true
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try4",
-            "processId": 15666,
-            "exited": true
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try4ARCompanion",
-            "processId": 22465,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try4",
-            "processId": 23257,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try4",
-            "processId": 23266,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.Try.Try4",
-            "processId": 16927,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 21297,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 15798,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 15799,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 15800,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 16173,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 16193,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 16194,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 17066,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 17067,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 17068,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 17393,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 17396,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 20215,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 23700,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 23731,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
-            "name": "com.SCU.AREmei",
-            "processId": 2941,
-            "exited": false
-        },
-        {
-            "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 2942,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 2943,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 2945,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "3ed50964",
             "name": "com.SCU.AREmei",
             "processId": 19043,
+            "exited": true
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.miui.home",
+            "processId": 3638,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 6541,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 6542,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 6545,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 27723,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 27724,
+            "exited": false
+        },
+        {
+            "deviceId": "3ed50964",
+            "name": "com.SCU.AREmei",
+            "processId": 27726,
             "exited": false
         }
     ],
